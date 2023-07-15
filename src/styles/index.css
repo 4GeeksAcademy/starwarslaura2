@@ -1,3 +1,39 @@
 /* 
     General Styles
 */
+.logostarwars{
+    height: 90px;
+    padding-left:15px;
+}
+.titulo_characters{
+    color: rgb(175, 37, 37);
+    margin-left: 20px;
+}
+.carta{
+    width: 250px;
+    margin:20px;
+}
+.like{
+    width: 20px;
+    border: none;
+    float: right;
+    
+}
+.learnMore{
+    width: 150px;
+    border: 1px solid lightseagreen;
+    border-radius: 5px;
+    float: left;
+    background-color: white;
+    color:lightseagreen;
+}
+.learnMore:hover{
+    background-color: dodgerblue;
+    color:white;
+}
+.linkLearnMore{
+    color:lightseagreen;
+}
+.linkLearnMore:hover{
+    color:white;
+}
