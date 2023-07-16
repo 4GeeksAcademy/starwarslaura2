@@ -48,7 +48,7 @@ useEffect(() => {
         <Link to={props.parametroespecial+props.id+"/"+props.name} className="linkLearnMore">Learn More! </Link></button>
        <button onClick={handleClick} className="like"> 
        {
-         (favoritos) ? <i className="fa-sharp fa-solid fa-heart heart fa-lg"></i>: <i className="fa-sharp fa-regular fa-heart heart fa-lg"></i>
+         (favoritos) ? <i className="fa-sharp fa-solid fa-heart heart fa-lg likeinterior solid"></i>: <i className="fa-regular fa-heart heart fa-lg likeinterior"></i>
                     }
        </button>
         </div>

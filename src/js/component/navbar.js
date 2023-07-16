@@ -18,18 +18,19 @@ export const Navbar = () => {
 
 	return (
 		<nav className="navbar navbar-light mb-3">
+           
 			<Link to="/">
-				<span className="navbar-brand mb-0 h1"><img className="logostarwars"src="https://www.teleadhesivo.com/es/img/as556-jpg/folder/products-listado-merchanthover/vinilos-decorativos-logo-star-wars-borde.jpg" alt="imagenStarWars"></img></span>
+				<span className="navbar-brand mb-0 h1"><img className="logostarwars"src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Star_Wars_Logo.svg/2560px-Star_Wars_Logo.svg.png" alt="imagenStarWars"></img></span>
 			</Link>
 			<div className="dropdown">
                 <button
-                    className="btn btn-secondary dropdown-toggle bg-primary"
+                    className="btn btn-secondary dropdown-toggle bg-primary botonfavoritos"
                     type="button"
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
                 >Favorites ({store.favorites.length})
                 </button>
-				<ul className="dropdown-menu dropdown-menu-end">
+				<ul className="dropdown-menu dropdown-menu-end listaDesplFav">
                     {store.favorites.length === 0 ? (
                         <li className="dropdown-item">Empty</li>
                     ) : (

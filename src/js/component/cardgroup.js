@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useContext } from "react";
-import PropTypes from "prop-types";
 import { Context } from "../store/appContext";
 import { Card } from "./card.js";
 

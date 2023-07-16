@@ -17,11 +17,11 @@ export const DetalleDePlanetas = () =>{
 
     return (<>
     {/* <h1>Personajes</h1> */}
-        <div>
+        <div className="detallesdecarta">
         <div className="d-flex">
-            <img src={(`https://starwars-visualguide.com/assets/img/planets/${id}.jpg`)} alt=""></img>
+            <img className="imagendetalle"  src={(`https://starwars-visualguide.com/assets/img/planets/${id}.jpg`)} alt=""></img>
             <div className="container-fluid">
-            <h1>{name}</h1>
+            <h1 className="titulodetallecarta">{name}</h1>
             <div className="row">
         <div className="col-2">
           <p>Name</p>
