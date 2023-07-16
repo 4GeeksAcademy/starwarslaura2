@@ -11,18 +11,45 @@ export const Card = props => {
 	const { store, actions } = useContext(Context)
     const {id, name} = useParams();
     const personaje=store.character;  
+    const [favoritos, setFavoritos]= useState(false);
+
+    const handleClick=e=>{
+        e.preventDefault()
+        let favoritosClic=[...store.favorites];
+        setFavoritos(!favoritos)
+
+        if(!favoritos === true) {
+            favoritosClic.push ({
+            name: props.name,
+            id: props.uid,
+        })
+
+    } else (
+        favoritosClic = favoritosClic.filter((item) => item.name !== props.name)
+        )
+     
+    actions.getFavorites(favoritosClic)
+
+}
+    
+useEffect(() => {
+    const isFavorito = store.favorites.some((favorite) => favorite.name === props.name);
+    setFavoritos(isFavorito);
+    
+}, [store.favorites]);
     
 
     return (
     <div className="card carta">
-        <img src="https://picsum.photos/200/300"  alt="..."/>
+        <img src={(`https://starwars-visualguide.com/assets/img/${props.parametroseccion}/${props.id}.jpg`)} alt={(`${props.name}`)}/>
         <div className="card-body">
         <h5 className="card-title">{props.name}</h5>
         <button className="learnMore">
         <Link to={props.parametroespecial+props.id+"/"+props.name} className="linkLearnMore">Learn More! </Link></button>
-       <button className="like"> <i class="fa-regular fa-heart"></i>
-       <img className="like" src="https://w7.pngwing.com/pngs/433/468/png-transparent-white-heart-shape-illustration-heart-outline-wedding-hearts-love-angle-white-thumbnail.png"></img> 
-       {/* <img className="like" src="https://fontawesome.com/icons/heart?f=classic&s=regular"></img>  */}
+       <button onClick={handleClick} className="like"> 
+       {
+         (favoritos) ? <i className="fa-sharp fa-solid fa-heart heart fa-lg"></i>: <i className="fa-sharp fa-regular fa-heart heart fa-lg"></i>
+                    }
        </button>
         </div>
   </div>)
@@ -32,5 +59,6 @@ Card.propTypes = {
     parametroespecial: PropTypes.string,
 	name: PropTypes.string,
     caracteristicas: PropTypes.object,
-    id: PropTypes.string
+    id: PropTypes.string,
+    parametroseccion: PropTypes.string,
 }

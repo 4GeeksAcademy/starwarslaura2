@@ -19,7 +19,7 @@ export const DetalleDePersonajes = () =>{
     {/* <h1>Personajes</h1> */}
         <div>
         <div className="d-flex">
-            <img src="https://picsum.photos/200/300" alt=""></img>
+            <img src={(`https://starwars-visualguide.com/assets/img/characters/${id}.jpg`)} alt=""></img>
             <div className="container-fluid">
             <h1>{name}</h1>
             <div className="row">

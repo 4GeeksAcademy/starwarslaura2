@@ -24,7 +24,8 @@ export const CardGroup = props => {
         <Card name={item.name}
             key={item.uid}
             id={item.uid}
-            parametroespecial="/detalledepersonajes/"/>,
+            parametroespecial="/detalledepersonajes/"
+            parametroseccion="characters"/>,
         ) }
         
      
@@ -34,8 +35,9 @@ export const CardGroup = props => {
         {planetas?.map((item)=>
         <Card name={item.name}
             key={item.uid}
-            {...item}
-            parametroespecial="/detalledeplanetas/"/>
+            id={item.uid}
+            parametroespecial="/detalledeplanetas/"
+            parametroseccion="planets"/>
 
         )}
         </div>
@@ -45,7 +47,10 @@ export const CardGroup = props => {
         {vehiculos?.map((item)=>
         <Card name={item.name}
             key={item.uid}
-            parametroespecial="/detalledevehiculos/"/>
+            id={item.uid}
+            parametroespecial="/detalledevehiculos/"
+            parametroseccion="vehicles"/>
+            
         )}
         </div>
 

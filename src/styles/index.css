@@ -14,10 +14,14 @@
     margin:20px;
 }
 .like{
-    width: 20px;
-    border: none;
-    float: right;
-    
+    width: 35px;
+    border: 1px solid rgb(235, 235, 46);
+    border-radius: 5px;
+    float: right; 
+    background-color: white;   
+}
+.heart{
+    color:rgb(235, 235, 46)
 }
 .learnMore{
     width: 150px;
@@ -36,4 +40,7 @@
 }
 .linkLearnMore:hover{
     color:white;
+}
+.link-fav{
+    margin-left: 3px;
 }
